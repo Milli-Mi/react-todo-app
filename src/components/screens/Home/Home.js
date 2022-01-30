@@ -1,7 +1,7 @@
 import React from 'react';
-import TodoItem from './TodoItem'
+import TodoItem from './item/TodoItem'
 
-const todos = [
+const data = [
     {
         title: 'Learn React JS',
         isComplied: false,
@@ -20,8 +20,17 @@ const todos = [
 ];
 
 const Home = () => {
+    const [todos, setTodos] = useState(data)
+    const changeTodo =(id)=> {
+        const copy = [...todos]
+      const current =  copy.find(t=>t.id === id).isComplied
+      current.isComplied = !current.isComplied
+      setTodos(copy)
+
+    }
     return (
-        <div className='bg-gray-900 h-screen text-white'>
+        <div className=' text-white w-4/5 mx-auto'>
+            <h1 className = 'text-2xl font-bold text-center mb-10 '>ToDo simple static</h1>
             
             {todos.map((todo) => (
                 <TodoItem key={todo.id} todo={todo} />
