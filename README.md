@@ -1,6 +1,5 @@
 # Getting Started with Create React App
 
-//https://youtu.be/sAa71agGwcg?list=PLXkonRjGXZwzL7roeExkrkaMZ2MWPAaEN 
  
 
 In the project directory, you can run:
